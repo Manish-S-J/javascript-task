@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>marriteal status:</label>
+<div id="rate">
+    <input type ="radio" name="rate" value="yes"> yes
+    <input type ="radio" name="rate" value="no" checked="checked"> no
+</div>
+    <button onclick="isMarried()">submit</button>
+</body>
+<script>
+    function isMarried(){
+    var rates = document.getElementsByName(`rate`);
+        for(var i = 0;i<rates.length;i++){
+            if(rates[i].checked){
+            var married = rates[i].value;
+            }
+        }console.log("married status :"+married);
+    }
+</script>
+</html>

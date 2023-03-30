@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>RESUME</h1>
+    <p><label>First Name : </label><input type="text" id="input1" placeholder="enter your first name">
+    <label>Second Name : </label><input type="text" id="input2" placeholder="enter your sur name"></p>
+    <p><label>Age : </label><input type="number" id="age" placeholder="enter your age"></p>
+    <p><label>Email : </label><input type="email" id="mail" placeholder="enter your email"></p>
+    <p><label>Qualification : </label><input type="text" id ="qualification" placeholder="enter your highest qualification"></p>
+    <p><label>Percentage : </label><input type="number" id="percentage" placeholder="enter your percentage"></p>
+    <p><label>Address : </label><input type="text" id="address" placeholder="enter your address"></p>
+    <p><label>Phone No : </label><input type="text" id="no" placeholder="enter your mobile no"></p>
+    <label>gender : </label>
+    <select id="se">
+         <option >male</option>
+        <option >female</option>
+        <option >others</option>
+    </select><br>
+    <br>
+    <label>skill :</label><br>
+    <br>
+        <input type ="checkbox" value ="html" name="skills">html</input><br>
+        <input type ="checkbox" value ="js" name="skills">js</input><br>
+        <input type ="checkbox" value="css" name="skills">css</input><br>
+    <br>
+    <label>marital status :</label>
+        <div id="rate">
+            <input type ="radio" id="yes" name="rate" value="yes"> yes
+            <input type ="radio" id="no" name="rate" value="no" checked="checked"> no
+        </div>
+    <br>
+    <button onclick="find()">submit</button>
+</body>
+<script>
+    function find(){
+        let Resume = [];
+        // get first name and second name
+        let input1 = document.getElementById(`input1`).value;
+        let input2 = document.getElementById(`input2`).value;
+        // get age 
+        let age = document.getElementById(`age`).value;
+        //get mail id using input type "mail"
+        let mail = document.getElementById(`mail`).value;
+        //get qualification
+        let qualification = document.getElementById(`qualification`).value;
+        //get percentage
+        let percentage = document.getElementById(`percentage`).value; 
+        //get address
+        let address = document.getElementById(`address`).value;
+        //get phone no
+        let no = document.getElementById(`no`).value;
+        // gender used by select tag
+        var gender = document.getElementById(`se`).value; 
+        //console.log("Gender : "+gender);
+        // skills -used the checkbox tag
+        let total=[];
+        var sk = document.getElementsByName(`skills`);
+        var Skill;
+        for(var i=0;i<sk.length;i++){
+            if(sk[i].checked){
+            Skill = sk[i].value;
+            total.push(Skill)
+            }
+        }//console.log("skills : "+total);
+        // marital status use the radio tag
+        var rates = document.getElementsByName(`rate`);
+        var married;
+            for(var i = 0;i<rates.length;i++){
+                if(rates[i].checked){
+                married = rates[i].value;
+                }
+            }//console.log("marital status : "+married);
+            let Result =
+            {Name : input1+" "+input2,
+            Age : age,
+            mail : mail,
+            Qualification : qualification,
+            Percentage : percentage,
+            Address : address,
+            Phone: no,
+            Gender : gender,
+            Skills : total,
+            MaritalStatus : married,
+            };
+            Resume.push(Result)
+            console.log(Resume);
+        
+    }
+</script>
+</html>

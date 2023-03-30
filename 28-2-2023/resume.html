@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><input type="text" id="input1" placeholder="enter your first name">
+    <input type="text" id="input2" placeholder="enter your sur name"></p>
+    <p><input type="number" id="age" placeholder="enter your age"></p>
+    <p><input type="email" id="mail" placeholder="enter your email"></p>
+    <p><input type="text" id ="qualification" placeholder="enter your highest qualification"></p>
+    <p><input type="number" id="percentage" placeholder="enter your percentage"></p>
+    <p><input type="text" id="address" placeholder="enter your address"></p>
+    <p><input type="text" id="no" placeholder="enter your mobile no"></p>
+    <button>submit</button>
+</body>
+<script>
+    
+    
+    let input1 = document.getElementById(`input1`).value;
+    let input2 = document.getElementById(`input2`).value;
+    let age = document.getElementById(`age`).value;
+    let mail = document.getElementById(`mail`).value;
+    let qualification = document.getElementById(`qualification`).value;
+    let percentage = document.getElementById(`percentage`).value; 
+    let address = document.getElementById(`address`).value;
+    let no = document.getElementById(`no`).value;
+
+    let resume = 
+    {
+        name : input1+" "+input2,
+        age : age,
+        mail : mail,
+        qualification : qualification,
+        percentage : percentage,
+        address : address,
+        phone: no
+    };
+    console.log(resume);
+
+
+</script>
+</html>

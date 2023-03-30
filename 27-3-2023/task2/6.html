@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="boxFontSizeButton">Change font size</button>
+    <div id="fontSizeBox">Change my font size</div>
+</body>
+<script>
+    let boxFontSizeButton = document.getElementById(`boxFontSizeButton`);
+    let fontSizeBox = document.getElementById(`fontSizeBox`);
+
+    boxFontSizeButton.addEventListener(`click`, changeBoxFontSize);
+
+        function changeBoxFontSize() {
+         fontSizeBox.style.fontSize = "30px";
+        }
+
+</script>
+</html>

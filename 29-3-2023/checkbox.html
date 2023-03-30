@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>skill:</label><br>
+    <input type ="checkbox" value ="html" name="skills">html</input><br>
+    <input type ="checkbox" value ="js" name="skills">js</input><br>
+    <input type ="checkbox" value="css" name="skills">css</input><br>
+</body>
+<script>
+    let total=[];
+    var sk = document.getElementsByName(`skills`);
+    var Skill;
+    for(var i=0;i<sk.length;i++){
+        if(sk[i].checked){
+        Skill = sk[i].value;
+        total.push(Skill)
+        }
+    }console.log(total);
+</script>
+</html>

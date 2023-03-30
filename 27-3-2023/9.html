@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="messageButton">Show message</button>
+<p id="messageParagraph"></p>
+<script>
+    let messageButton = document.getElementById(`messageButton`);
+let messageParagraph = document.getElementById(`messageParagraph`);
+
+messageButton.addEventListener(`click`, showMessage);
+
+function showMessage() {
+  messageParagraph.innerHTML = "you have an missed call fro+91**********.";
+}
+</script>
+
+</body>
+</html>

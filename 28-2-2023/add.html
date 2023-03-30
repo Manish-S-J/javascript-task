@@ -1,0 +1,28 @@
+<html>
+<head>
+</head>
+<body>
+    <input type="text" id= "f_input" placeholder="Enter input 1"/>
+    <input type="text" id ="s_input" placeholder="Enter input 2"/>
+    <span id ="result"></span>
+    <button onclick="add()">add</button>
+</body>
+<script>
+    let history = [];
+    function add(){
+        let f_input = Number(document.getElementById("f_input").value);
+        let s_input = Number(document.getElementById("s_input").value);
+        let result =f_input+s_input;
+        console.log(result);
+        let newObj ={
+            fi: f_input,
+            si : s_input,
+            ri : oddOREven
+        }
+        let oddOREven = result%2 == 1? result+" is Odd" : result+" is Even";
+        console.log(oddOREven);
+        history.push(newObj);
+        console.log(history);
+    }
+    </script>
+</html>

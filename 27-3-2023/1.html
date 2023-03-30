@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button id="greetingButton">Say greeting</button>
+<p id="greetingParagraph">karka</p>
+
+</body>
+<script>
+    
+    let greetingButton = document.getElementById(`greetingButton`)
+    let greetingParagraph = document.getElementById(`greetingParagraph`)
+    greetingButton.addEventListener(`click`,sayGreeting )
+    function sayGreeting() {
+        greetingParagraph.innerHTML = `Welcome to exercise set 1`
+    }
+
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="colorButton">Change text color</button>
+    <p id="colorParagraph">Change my text color</p>
+</body>
+<script>
+    let colorButton = document.getElementById(`colorButton`);
+    let colorParagraph = document.getElementById(`colorParagraph`);
+
+    colorButton.addEventListener(`click`, changeTextColor)
+
+    function changeTextColor() {
+    colorParagraph.style.color = "purple";
+    }
+
+</script>
+</html>
