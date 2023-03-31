@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Name : </label><input type="text" id="name"><br>
+    <label>Phone : </label><input type="number" id="phone"><br>
+    <label>skill:</label><br>
+    <input type="checkbox" value="html" name="skills">html</input><br>
+    <input type="checkbox" value="js" name="skills">js</input><br>
+    <input type="checkbox" value="css" name="skills">css</input><br>
+    <br>
+    <table border=2>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Instituion Name</th>
+                <th>Percentage</th>
+                <th>Year Of Passed Out</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><input type="text" placeholder="Enter your Instituion Name"
+                        onkeyup="educationDetails(0,'Instution',this.value)" /></td>
+                <td><input type="text" placeholder="Enter your Percentage"
+                        onkeyup="educationDetails(0,'Percentage',this.value)" /></td>
+                <td><input type="text" placeholder="Enter your Year of Passed"
+                        onkeyup="educationDetails(0,'PassedOut',this.value)" /></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text" placeholder="Enter your Instituion Name"
+                        onkeyup="educationDetails(1,'Instution',this.value)" /></td>
+                <td><input type="text" placeholder="Enter your Percentage"
+                        onkeyup="educationDetails(1,'Percentage',this.value)" /></td>
+                <td><input type="text" placeholder="Enter your Year of Passed"
+                        onkeyup="educationDetails(1,'PassedOut',this.value)" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="resume()">submit</button>
+</body>
+<script>
+    let education = [];
+        function educationDetails(i,k,v) {
+            education[i] = {
+                ...education[i],
+                [k]: v
+            };
+        };
+    let uResume = [];
+    function resume() {
+
+        //used for name
+        var name = document.getElementById(`name`).value;
+
+        //used for phone no
+        var phone = document.getElementById(`phone`).value;
+
+        //used for skills
+        let total = [];
+        var sk = document.getElementsByName(`skills`);
+        for (var i = 0; i < sk.length; i++) {
+            if (sk[i].checked) {
+                let Skill = sk[i].value;
+                total.push(Skill)
+            }
+        }
+        //used for education details
+    
+
+    let obj = {
+        name: name,
+        phone: phone,
+        skill: total,
+        details: education,
+    }
+    uResume.push(obj)
+    console.log(uResume);
+    }
+
+
+</script>
+
+</html>
