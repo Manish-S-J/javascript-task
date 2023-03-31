@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="hobby" placeholder="hobby">
+    <button onclick="hob()">submit</button>
+</body>
+<script>
+    
+    function hob(){
+    var hobby = document.getElementById("hobby").value;
+   var hb= hobby.split(",");
+    hb.pop();
+    console.log(hb);
+    }
+</script>
+</html>
