@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>
+        <h2>Convert Decimal To Binary</h2>
+    </label>
+    <label>Enter the Decimal Number : </label><input type="number" id="num" placeholder="decimal number"><br>
+    <br>
+    <button onclick="convert()">click</button>
+
+</body>
+<script>
+    function convert() {
+        var num = Number(document.getElementById("num").value);
+
+        //using toString to convert decimal to binary
+        console.log(num.toString(2));
+    }
+</script>
+
+</html>

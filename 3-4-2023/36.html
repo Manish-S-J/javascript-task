@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>
+        <h2>Returning An Empty Array</h2>
+    </label>
+    <label>Enter The Numbers : </label><input type="text" id="arr" placeholder="numbers">
+    <button onclick="empty()">Submit</button>
+</body>
+<script>
+    function empty() {
+        var arr = document.getElementById("arr").value;
+        let newArr = arr.split(",");
+
+        // used splice method to make the arr empty
+        newArr.splice(0, arr.length);
+        console.log(newArr);
+    }
+</script>
+
+</html>

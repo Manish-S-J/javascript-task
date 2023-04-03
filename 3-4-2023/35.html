@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>
+        <h2>Remove the Blank Space in Starting And Ending Using Trim()</h2>
+    </label>
+    <label>Enter the value : </label><input type="text" id="val"
+        placeholder="use blank space in starting and ending"><br>
+    <br>
+    <button onclick="remove()">submit</button>
+</body>
+<script>
+    function remove() {
+        var val = document.getElementById("val").value;
+
+        // using trim to remove spaces
+        console.log(val.trim());
+    }
+</script>
+
+</html>

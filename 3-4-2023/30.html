@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>
+        <h1>Splice & Slice</h1>
+    </label>
+    <label>Enter the values : </label><input type="text" id="value" placeholder="1,2,3 or a,b,c"><br>
+    <label><h4>Slice : </h4></label>
+    <label>Starting parameter : </label><input type="number" id="num1" placeholder="Starting"><br>
+    <label> Ending Prameter : </label><input type="number" id="num2" placeholder="Ending"><br>
+    <br>
+    <label><h4>Splice : </h4> </label>
+    <label>Starting : </label><input type="number" id="num01" placeholder="Starting"><br>
+    <label>Delete count : </label><input type="number" id="num02" placeholder="Delete count"><br>
+    <label>Item to add : </label><input type="number" id="num03" placeholder="ADD"><br>
+    <br>
+    <button onclick="redefine()">Submit</button>
+
+</body>
+<script>
+    function redefine() {
+        var value = document.getElementById("value").value;
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        var num01 = document.getElementById("num01").value;
+        var num02 = document.getElementById("num02").value;
+        var num03 = document.getElementById("num03").value;
+        var value1 = value.split(',');
+        console.log(value1);
+
+        //used for splice
+         value1.splice(num01, num02, num03);
+        console.log(value1);
+
+        //used for slice
+        var value2 = value1.slice(num1, num2);
+        console.log(value2);
+
+        
+    }
+
+</script>
+
+</html>

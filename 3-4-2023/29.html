@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>
+        <h2> change the given values from Acending to Decending order</h2>
+    </label>
+    <label>Enter the values : </label><input type="text" id="value" placeholder="enter the values"><br>
+    <br>
+    <button onclick="arrange()">submit</button>
+</body>
+<script>
+    //used to arrange alphabetically or ascending to decending order
+    function arrange() {
+        var value = document.getElementById("value").value;
+        let value1 = value.split(',');
+        value1.sort();
+        console.log(value1);
+    }
+</script>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>
+        <h2>Merging 2 Objects</h2>
+    </label>
+    <label>Enter Your name : </label><input type="text" id="num1" placeholder="Name"><br>
+    <label>Enter Your age : </label><input type="text" id="num2" placeholder="Age"><br>
+    <label>Enter Your number : </label><input type="text" id="num3" placeholder="Phone No"><br>
+    <br>
+    <button onclick="obj()">Submit</button>
+</body>
+<script>
+    function obj() {
+        // 1st object
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        let det = {
+            name: num1,
+            age: num2
+        }
+        console.log(det);
+
+        // 2nd object
+        var num3 = document.getElementById("num3").value;
+        let ail = {
+            phone: num3
+        }
+        console.log(ail);
+
+        // merging 1st and 2nd object
+        let details = { ...det, ...ail };
+        console.log(details);
+    }
+</script>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label><h2>Remove All The White Spaces</h2></label>
+    <label>Enter Any 2 or more words : </label><input type="text" id="tex" placeholder="eg: are you watching "><br>
+    <br>
+    <button onclick="remove()">Clear</button>
+</body>
+<script>
+    function remove(){
+        var tex = document.getElementById("tex").value;
+         console.log(tex.replace(/ /g,"")); 
+    }
+</script>
+</html>
